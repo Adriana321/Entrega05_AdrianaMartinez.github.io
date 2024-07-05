@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guerreras de la Roja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Guerreras de la Roja</h1>
+        <p>Una exploración de la selección femenina de fútbol chilena</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#quienes-somos">¿Quiénes somos?</a></li>
+            <li><a href="#composicion-seleccion">¿Cómo se compone la selección femenina?</a></li>
+            <li><a href="#amistosos">Jugadoras que han participado en amistosos</a></li>
+            <li><a href="#veronica-riquelme">Verónica Riquelme</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="quienes-somos">
+            <h2>¿Quiénes somos?</h2>
+            <img src="1716943720851-19d9c531-2994-453d-9655-8685ae460031.jpeg" alt="Guerreras de la Roja">
+            <p>En Guerreras de la Roja, somos un equipo apasionado por el fútbol femenino chileno. Nuestra misión es destacar y celebrar el talento, la dedicación y los logros de las futbolistas chilenas, tanto en el ámbito nacional como internacional.</p>
+            <p>Desde la creación de este proyecto, hemos trabajado incansablemente para proporcionar una plataforma que visibilice las historias inspiradoras de nuestras jugadoras, analice su rendimiento y explore los desafíos y triunfos que enfrentan en su camino hacia la excelencia.</p>
+            <p><strong>Nuestra Visión:</strong> Crear un espacio donde el fútbol femenino chileno sea valorado, respetado y apoyado de manera equitativa, contribuyendo al desarrollo y crecimiento del deporte en nuestro país.</p>
+            <p><strong>Nuestros Valores:</strong></p>
+            <ul>
+                <li>Pasión: Amamos el fútbol y creemos en el poder del deporte para transformar vidas.</li>
+                <li>Equidad: Promovemos la igualdad de oportunidades y condiciones para todas las futbolistas.</li>
+                <li>Compromiso: Estamos dedicados a visibilizar y apoyar el fútbol femenino en todas sus formas.</li>
+                <li>Innovación: Utilizamos herramientas y métodos innovadores para contar historias y analizar datos de manera efectiva y atractiva.</li>
+            </ul>
+        </section>
+        <section id="composicion-seleccion">
+            <h2>¿Cómo se compone la selección femenina?</h2>
+            <p>Las Guerreras de la Roja en los Juegos Panamericanos 2023 demostraron su talento y determinación. Estas Guerreras de la Roja no solo representaron a nuestro país con orgullo, sino que también dejaron una marca imborrable en el torneo.</p>
+            <p>El corazón del equipo estuvo compuesto por:</p>
+            <ul>
+                <li><strong>Jugadoras veteranas:</strong>
+                    <ul>
+                        <li><strong>Tiane Endler:</strong> Capitana y guardiana del arco, reconocida mundialmente.</li>
+                        <li><strong>Karen Araya:</strong> Mediocampista experimentada, clave en la creación de oportunidades.</li>
+                        <li><strong>Yanara Aedo:</strong> Delantera veloz y hábil, amenaza constante para las defensas contrarias.</li>
+                    </ul>
+                </li>
+                <li><strong>Jóvenes promesas:</strong>
+                    <ul>
+                        <li><strong>Isidora Olave:</strong> Defensa joven con una gran capacidad de anticipación y madurez en el campo.</li>
+                        <li><strong>Sofia Hartard:</strong> Mediocampista precisa en sus pases y fundamental para conectar la defensa con el ataque.</li>
+                        <li><strong>Fernanda Pinilla:</strong> Delantera prometedora, destacada por su olfato goleador.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>La diversidad de edades entre las jugadoras fue una de las fortalezas del equipo. Esta mezcla permitió combinar la sabiduría y la experiencia de las jugadoras veteranas con la energía y la frescura de las más jóvenes.</p>
+            <p>Durante el torneo, las Guerreras de la Roja enfrentaron a equipos de alto nivel, mostrando su capacidad competitiva y su constante crecimiento. Cada partido fue una prueba de su esfuerzo y dedicación, inspirando a futuras generaciones de futbolistas.</p>
+            <p>La participación de la selección femenina en los Juegos Panamericanos 2023 destacó el avance del fútbol femenino chileno. Con una mezcla perfecta de experiencia y juventud, estas jugadoras continúan elevando el nivel del deporte y dejando una huella duradera en la historia del fútbol.</p>
+            <div id="chart"></div>
+        </section>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script>
+    var nombres = ["Michelle Acevedo", "Fernanda Ramírez ", "Yastin Jiménez ", "Anais Álvarez", "Yessenia López ", "Yanara Aedo", "María José Urrutia", "Isidora Olave ", "Helen Galaz ", "Fernanda Pinilla", "Karen Fuentes", "Franchesca Caniguán", "Daniela Zamora", "Christiane Endler", "Yenny Acuña", "Antonia Canales", "Karen Araya", "Camila Sáez"];
+    var edades = ["Edad=22 años", "Edad=31 años", "Edad=23 años", "Edad=16 años", "Edad=33 años", "Edad=30 años", "Edad=30 años", "Edad=22 años", "Edad=33 años", "Edad=30 años", "Edad=19 años", "Edad=24 años", "Edad=33 años", "Edad=32 años", "Edad=27 años", "Edad=21 años", "Edad=33 años", "Edad=29 años"];
+    var equipos = ["Colo Colo", "Colo Colo", "Colo Colo", "Colo Colo", "Colo Colo", "Colo Colo", "Colo Colo", "Colo Colo", "Santiago Morning", "Universidad de Chile ", "Universidad de Chile ", "Universidad de Chile ", "Universidad de Chile ", "Olympique Lyon", "Sport Bahía", "Valencia ", "Madrid CFF", "Madrid CFF"];
+    var colores = ["#636EFA", "#636EFA", "#636EFA", "#636EFA", "#636EFA", "#636EFA", "#636EFA", "#636EFA", "#EF553B", "#00CC96", "#00CC96", "#00CC96", "#00CC96", "#AB63FA", "#FFA15A", "#19D3F3", "#FF6692", "#FF6692"];
+
+    var trace1 = {
+        x: nombres,
+        y: edades.map(e => parseInt(e.split('=')[1])),
+        mode: 'markers',
+        marker: {
+            color: colores,
+            size: 12
+        },
+        text: equipos.map((e, i) => nombres[i] + " - " + edades[i] + " - " + e),
+        type: 'scatter'
+    };
+
+    var data = [trace1];
+
+    var layout = {
+        title: 'Edad de las Jugadoras por Equipo',
+        xaxis: {
+            title: 'Nombre de la Jugadora'
+        },
+        yaxis: {
+            title: 'Edad'
+        }
+    };
+
+    Plotly.newPlot('chart', data, layout);
+</script>
+        <section id="amistosos">
+            <h2>Jugadoras que han participado en amistosos</h2>
+            <p>En esta sección, revelamos los detalles más fascinantes sobre las apariciones de nuestras Guerreras de la Roja en los partidos amistosos. Estos encuentros son esenciales para probar tácticas, evaluar el rendimiento y preparar al equipo para los desafíos internacionales.</p>
+            <ul>
+                <li><strong>Destacadas en el Campo:</strong>
+                    <ul>
+                        <li><strong>Tiane Endler:</strong> Capitana y líder indiscutible, presencia constante en el arco.</li>
+                        <li><strong>Karen Araya:</strong> Experiencia y visión de juego, fundamental en el mediocampo.</li>
+                        <li><strong>Yanara Aedo:</strong> Velocidad y destreza, amenaza en el ataque.</li>
+                    </ul>
+                </li>
+                <li><strong>Promesas Emergentes:</strong>
+                    <ul>
+                        <li><strong>Isidora Olave:</strong> Defensa joven con gran capacidad de anticipación.</li>
+                        <li><strong>Sofia Hartard:</strong> Mediocampista precisa y conectiva.</li>
+                        <li><strong>Fernanda Pinilla:</strong> Delantera prometedora con olfato goleador.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p><strong>La Paradoja de las Goleadoras:</strong> A pesar de su impresionante rendimiento en campeonatos nacionales, jugadoras como Verónica Riquelme y Nathalie Quezada han tenido menos participaciones en los amistosos. Esta sección analiza las posibles razones detrás de estas decisiones y cómo el cuerpo técnico equilibra la experiencia y la juventud en el equipo.</p>
+            <div id="chart"></div>
+        </section>
+        <section id="veronica-riquelme">
+            <h2>Verónica Riquelme</h2>
+            <p>Verónica Riquelme es una de las delanteras más prolíficas del fútbol chileno, destacándose en los campeonatos nacionales con una impresionante cantidad de goles. Sin embargo, a pesar de su evidente talento y capacidad goleadora, Riquelme no ha sido convocada para los partidos amistosos de la selección nacional, lo que plantea una pregunta importante: ¿Por qué una jugadora tan destacada no tiene apariciones en estos encuentros preparatorios?</p>
+            <ul>
+                <li><strong>Carrera:</strong> Verónica Riquelme ha construido una carrera impresionante en el fútbol femenino chileno. Su habilidad para encontrar el fondo de la red y su consistencia en el campo la han convertido en una figura esencial para su club. En la última temporada, Riquelme anotó 89 goles, consolidándose como una de las máximas goleadoras del campeonato chileno.</li>
+                <li><strong>Ausencia en Amistosos:</strong> A pesar de su éxito a nivel de clubes, Riquelme no figura en las convocatorias para los partidos amistosos de la selección nacional. Posibles razones incluyen:
+                    <ul>
+                        <li>Estrategia del Cuerpo Técnico: Es posible que el cuerpo técnico prefiera evaluar a otras jugadoras en los amistosos, reservando a Riquelme para los partidos oficiales. Esta estrategia puede estar basada en la necesidad de probar diferentes combinaciones de jugadoras y no sobrecargar a las titulares.</li>
+                        <li>Compatibilidad con el Sistema de Juego: Otra posible explicación es que, aunque Riquelme sea una excelente goleadora a nivel de clubes, su estilo de juego puede no encajar perfectamente con el sistema táctico que el entrenador de la selección busca implementar. Los amistosos podrían ser utilizados para encontrar jugadoras que se adapten mejor a esta táctica específica.</li>
+                        <li>Factores Externos: También hay factores externos que podrían influir en su ausencia, como lesiones, compromisos personales o decisiones administrativas dentro de la federación.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Impacto en la Selección: La falta de apariciones de Riquelme en los amistosos puede tener un impacto significativo en la dinámica del equipo. Su experiencia y habilidad podrían aportar mucho en estos encuentros, ofreciendo oportunidades para ajustar tácticas y fortalecer la cohesión del equipo. Además, su ausencia podría estar privando a la selección de una de sus armas ofensivas más efectivas.</p>
+            <p>La historia de Verónica Riquelme subraya una paradoja en la gestión del talento dentro de la selección femenina chilena. Aunque su capacidad goleadora está comprobada, su falta de participación en los amistosos plantea preguntas sobre las estrategias de selección y preparación del equipo. Esta situación invita a reflexionar sobre cómo se toman las decisiones de convocatoria y la importancia de aprovechar al máximo el talento disponible para enfrentar desafíos futuros.</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
